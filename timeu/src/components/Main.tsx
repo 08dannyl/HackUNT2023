@@ -83,7 +83,7 @@ function Main() {
           <tbody>
             {hoursOfDay2.map((hour) => (
               <tr key={hour}>
-                <td>{`${hour}am`}</td>
+                <td>{`${hour}pm`}</td>
                 {daysOfWeek.map((day, index) => (
                   <td key={index}></td>
                 ))}
@@ -95,7 +95,7 @@ function Main() {
           <tbody>
             {hoursOfDay3.map((hour) => (
               <tr key={hour}>
-                <td>{`${hour}am`}</td>
+                <td>{`${hour}pm`}</td>
                 {daysOfWeek.map((day, index) => (
                   <td key={index}></td>
                 ))}
