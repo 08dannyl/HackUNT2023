@@ -30,7 +30,9 @@ function Main() {
   }
 
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-  const hoursOfDay = Array.from({ length: 24 }, (_, i) => i);
+  const hoursOfDay = Array.from({ length: 6 }, (_, i) => i + 6); // Adjusted hours
+  const hoursOfDay2 = Array.from({ length: 1 }, (_, i) => i + 12); // Adjusted hours
+  const hoursOfDay3 = Array.from({ length: 11 }, (_, i) => i + 1); // Adjusted hours
 
   return (
     <div className="App">
@@ -57,7 +59,7 @@ function Main() {
       </div>
 
       <div className="calendar-table" onDrop={handleOnDrop} onDragOver={handleDragOver}>
-        <table>
+      <table>
           <thead>
             <tr>
               <th></th>
@@ -73,10 +75,36 @@ function Main() {
                 {daysOfWeek.map((day, index) => (
                   <td key={index}></td>
                 ))}
+
+
               </tr>
             ))}
           </tbody>
-        </table>
+          <tbody>
+            {hoursOfDay2.map((hour) => (
+              <tr key={hour}>
+                <td>{`${hour}am`}</td>
+                {daysOfWeek.map((day, index) => (
+                  <td key={index}></td>
+                ))}
+
+
+              </tr>
+            ))}
+          </tbody>
+          <tbody>
+            {hoursOfDay3.map((hour) => (
+              <tr key={hour}>
+                <td>{`${hour}am`}</td>
+                {daysOfWeek.map((day, index) => (
+                  <td key={index}></td>
+                ))}
+
+
+              </tr>
+            ))}
+          </tbody>
+        </table> 
       </div>
 
       <div>
