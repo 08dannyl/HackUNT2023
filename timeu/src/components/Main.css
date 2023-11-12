@@ -14,7 +14,8 @@
     border: 1px solid black;
     font-weight: bold;
     width: rem;
-    text-align: left;
+    height: 2rem;
+    text-align: center;
     cursor: pointer;
     display: block; /* Set to block for vertical alignment */
     margin-bottom: 10px; /* Adjust margin as needed for space between widgets */
@@ -26,8 +27,7 @@
 
 
 .dropbox{
-    border: 1px solid black;
-    width: 6rem;
+    width: 12rem;
 }
 
 .widget {
@@ -51,7 +51,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-left: 2%;
     font-weight: bold;
-    color:rgb(172, 10, 172);
+    color: none;
   }
     
   .clearButton,
@@ -73,21 +73,27 @@
 
 .clearButton {
     left: 0; /* Align to the left */
+    width:9rem;
+    text-align: center;
 }
 
 .pomodoro {
-  background: radial-gradient(1173px at -3.5% -4.8%, rgb(255, 140, 16) 8.4%, rgb(255, 26, 26) 20.6%, rgb(0, 64, 249) 46.7%, rgb(131, 201, 8) 69.6%, rgb(255, 230, 28) 84.7%);  
-  left: calc(100% - 160px); /* Align to the right with 10px space in between */
-text-align: center;
-color: #ffffff;
+    background: radial-gradient(1173px at -3.5% -4.8%, rgb(255, 140, 16) 8.4%, rgb(255, 26, 26) 20.6%, rgb(0, 64, 249) 46.7%, rgb(131, 201, 8) 69.6%, rgb(255, 230, 28) 84.7%);  
+    left: calc(100% - 160px); /* Align to the right with 10px space in between */
+    text-align: center;
+    color: #ffffff;
+    left:0;
+    bottom:3rem;
+    width:9rem;
+    text-align: center;
 }
 
 
 /* Add or update styles in your Main.css file */
 
 .calendar-table {
-  margin-top: 20px;
-  overflow-x: auto;
+  width:100%;
+  overflow-y: auto;
   background: radial-gradient(circle at 10% 20%, rgb(142, 224, 251) 0%, rgb(255, 121, 225) 100.7%);
 }
 

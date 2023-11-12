@@ -34,34 +34,6 @@ function Main() {
 
   return (
     <div className="App">
-      <div className="ToDo">
-        <p>To Do:</p>
-      </div>
-
-      <div className="widgets">
-        <div
-          className="widget"
-          draggable
-          onDragStart={(e) => handleOnDrag(e, "Physics Homework")}
-        >
-          Physics Homework
-        </div>
-        <div
-          className="widget"
-          draggable
-          onDragStart={(e) => handleOnDrag(e, "HackUNT Rest Session")}
-        >
-          HackUNT Rest Session
-        </div>
-        <div
-          className="widget"
-          draggable
-          onDragStart={(e) => handleOnDrag(e, "Holiday")}
-        >
-          Holiday
-        </div>
-      </div>
-
       <div className="dropbox" onDrop={handleOnDrop} onDragOver={handleDragOver}>
         {widgets.map((widget, index) => (
           <div className="widget" key={index}>
@@ -70,14 +42,16 @@ function Main() {
               draggable
               onDragStart={(e) => handleOnDrag(e, widget)}
             >
-              {widget}
+                <span
+                className="remove-icon"
+                onClick={() => handleRemoveWidget(index)}
+                >
+                &#10005;
+                </span>
+                {widget}
+              
             </div>
-            <span
-              className="remove-icon"
-              onClick={() => handleRemoveWidget(index)}
-            >
-              &#10005;
-            </span>
+            
           </div>
         ))}
       </div>
@@ -106,16 +80,21 @@ function Main() {
       </div>
 
       <div>
-        <button className="clearButton" onClick={handleClearWidgets}>
-          Clear Widgets
-        </button>
-        <a
-          href="https://www.toptal.com/project-managers/tomato-timer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="pomodoro">🍅Pomodoro Timer</button>
-        </a>
+        <div>
+            <button className="clearButton" onClick={handleClearWidgets}>
+            Clear Widgets
+            </button>
+        </div>
+        <div>
+            <a
+                href="https://www.toptal.com/project-managers/tomato-timer"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <button className="pomodoro">🍅Pomodoro Timer</button>
+            </a>
+        </div>
+        
       </div>
     </div>
   );
